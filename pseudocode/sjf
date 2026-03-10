@@ -1,0 +1,13 @@
+sjf(processes.txt):
+
+  sort burst_times in ascending order
+
+  time = 0
+
+  for each process i:
+
+    waiting_time[i] = time
+
+    time = time + burst_time[i]
+
+    turnaround_time[i] = waiting_time[i] + burst_time[i]

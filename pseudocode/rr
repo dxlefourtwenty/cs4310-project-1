@@ -1,0 +1,26 @@
+roundrobin(processes, quantum):
+
+  time = 0
+  ready_queue = queue containing all processes
+
+  for each process
+    process.remaining_time = process.burst_time
+
+  while ready_queue not empty:
+
+    current = dequeue from ready_queue
+
+    if current.remaining_time > quantum
+
+      time = time + quantum
+      current.remaining_time = current.remaining_time - quantum
+
+      enqueue current back into ready_queue
+
+    else
+
+      time = time + current.remaining_time
+      current.remaining_time = 0
+
+      current.turnaround_time = time
+      current.waiting_time = current.turnaround_time - current.burst_time

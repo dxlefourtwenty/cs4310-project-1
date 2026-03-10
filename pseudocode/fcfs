@@ -1,0 +1,19 @@
+fcfs(processes.txt):
+  
+  processes = parse processes.txt
+
+  sort processes by arrival time (job1 = 1st, etc.)
+
+  time = 0
+
+  for each process in processes:
+
+    process.waiting_time = time 
+
+    time = time + process.burst_time
+
+    process.turnaround_time = process.waiting_time + process.burst_time
+
+  end for
+
+end
