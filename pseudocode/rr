@@ -24,3 +24,4 @@ roundrobin(processes, quantum):
 
       current.turnaround_time = time
       current.waiting_time = current.turnaround_time - current.burst_time
+

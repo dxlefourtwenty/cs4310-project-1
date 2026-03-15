@@ -1,4 +1,4 @@
-from algorithm_files import fcfs, sjf# rr
+from algorithm_files import fcfs, sjf, rr
 import file_generator
 
 small = "job_files/small_batch.txt"
@@ -37,11 +37,29 @@ def test_sjf():
         \nAverage Waiting Time: {large_avg_wait:.2f} \
         \nAverage Turnaround Time: {large_avg_turnaround:.2f}")
 
+def test_rr(time_slice):
+  small_avg_wait, small_avg_turnaround = rr.run(small, time_slice)
+  medium_avg_wait, medium_avg_turnaround = rr.run(medium, time_slice)
+  large_avg_wait, large_avg_turnaround = rr.run(large, time_slice)
+
+  print(f"\n---Round Robin Slice = {time_slice}---")
+  print(f">>Small batch \
+        \nAverage Waiting Time: {small_avg_wait:.2f} \
+        \nAverage Turnaround Time: {small_avg_turnaround:.2f}")
+  print(f"\n>>Medium batch \
+        \nAverage Waiting Time: {medium_avg_wait:.2f} \
+        \nAverage Turnaround Time: {medium_avg_turnaround:.2f}")
+  print(f"\n>>Large batch \
+        \nAverage Waiting Time: {large_avg_wait:.2f} \
+        \nAverage Turnaround Time: {large_avg_turnaround:.2f}")
+
 def main():
   file_generator.generate()        
 
   test_fcfs()
   test_sjf()
+  test_rr(2)
+  test_rr(5)
 
 main()
 
