@@ -1,3 +1,4 @@
+# file reader for main()
 def parse_file(file_path):
 
   processes = []
