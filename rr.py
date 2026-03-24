@@ -1,4 +1,4 @@
-from . import parser
+import parser
 from collections import deque
 
 def _run_algorithm(processes, slice):

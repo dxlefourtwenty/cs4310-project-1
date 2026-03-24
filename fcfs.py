@@ -1,4 +1,4 @@
-from . import parser
+import parser
 
 def _run_algorithm(processes):
   process_count = len(processes)

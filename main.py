@@ -1,4 +1,4 @@
-from algorithm_files import fcfs, sjf, rr
+import fcfs, sjf, rr
 import file_generator
 
 test_runs = 20

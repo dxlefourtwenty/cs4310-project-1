@@ -1,4 +1,4 @@
-from . import parser
+import parser
 
 def _run_algorithm(processes):
   processes.sort(key=lambda p: p["burst"])
