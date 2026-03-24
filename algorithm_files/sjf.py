@@ -25,6 +25,9 @@ def _run_algorithm(processes):
 
   return avg_wait, avg_turnaround
 
+# returns avg_wait, then avg_turnaround
+# in that order
+# make sure parser.py is imported in the same dir as this
 def run(file_path):
   return _run_algorithm(parser.parse_file(file_path))
 

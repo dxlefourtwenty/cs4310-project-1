@@ -129,14 +129,14 @@ def batch_test():
 # generate a batch with
 # python file_generator.py
 def main():
-  print("[Correctness Test]")
-  test_fcfs()
-  test_sjf()
-  test_rr(2)
-  test_rr(5)
+  # print("[Correctness Test]")
+  # test_fcfs()
+  # test_sjf()
+  # test_rr(2)
+  # test_rr(5)
 
-  # print("[Batch Test]")
-  # batch_test()
+  print("[Batch Test]")
+  batch_test()
 
 main()
 
